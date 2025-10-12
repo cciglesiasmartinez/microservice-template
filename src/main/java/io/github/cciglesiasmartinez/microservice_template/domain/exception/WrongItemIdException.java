@@ -1,4 +1,4 @@
-package io.github.cciglesiasmartinez.microservice_template.domain.model.exception;
+package io.github.cciglesiasmartinez.microservice_template.domain.exception;
 
 /**
  * Esta clase representará una excepción personalizada básica.

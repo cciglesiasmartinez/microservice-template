@@ -2,8 +2,7 @@ package io.github.cciglesiasmartinez.microservice_template.domain.model.valueobj
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.github.cciglesiasmartinez.microservice_template.domain.model.Item;
-import io.github.cciglesiasmartinez.microservice_template.domain.model.exception.WrongItemIdException;
+import io.github.cciglesiasmartinez.microservice_template.domain.exception.WrongItemIdException;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 

@@ -1,4 +1,4 @@
-package io.github.cciglesiasmartinez.microservice_template.domain.model.port.out;
+package io.github.cciglesiasmartinez.microservice_template.domain.port.out;
 
 import io.github.cciglesiasmartinez.microservice_template.domain.model.Item;
 import io.github.cciglesiasmartinez.microservice_template.domain.model.valueobjects.ItemId;
