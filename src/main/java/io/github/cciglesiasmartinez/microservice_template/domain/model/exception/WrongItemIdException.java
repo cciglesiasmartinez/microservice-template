@@ -13,15 +13,15 @@ package io.github.cciglesiasmartinez.microservice_template.domain.model.exceptio
  * Todas las excepciones personalizadas deberán seguir este formato. Serà menester crear una nueva excepción siempre
  * que sea oportuno (lógica de negocio, etc), y evitar usar excepciones genéricas como RunTimeException.
  */
-public class ItemNotFoundException extends RuntimeException {
+public class WrongItemIdException extends RuntimeException {
 
-    private static final String DEFAULT_MESSAGE = "Item not found.";
+    private static final String DEFAULT_MESSAGE = "Wrong ItemId.";
 
-    public ItemNotFoundException() {
+    public WrongItemIdException() {
         super(DEFAULT_MESSAGE);
     }
 
-    public ItemNotFoundException(String message) {
+    public WrongItemIdException(String message) {
         super(message);
     }
 
