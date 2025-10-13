@@ -24,7 +24,7 @@ import java.util.UUID;
  * Además, emplearemos anotaciones como @JsonCreator o @JsonProperty tal y como hemos hecho en este caso cuando sea
  * necesario serializar en JSON el value object.
  * <p>
- * Por último, recalcar que por convención en el caso de los value objects el getter será .value() simplemente y no
+ * Por último, recalcar que por convención en el caso de los value objects el getter será value() simplemente y no
  * getValue(), aunque en este caso concreto tendremos también el getter getValue() que será empleado por las librerías
  * que serializan JSON.
  */
