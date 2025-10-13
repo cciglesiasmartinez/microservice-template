@@ -23,7 +23,7 @@ public class Name {
     }
 
     public static Name of(String name) {
-        if (name == null || name.isEmpty() || name.isBlank()) {
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Name can't be null or empty.");
         }
         return new Name(name);
