@@ -5,7 +5,7 @@ package io.github.cciglesiasmartinez.microservice_template.domain.port.out;
  * <p>
  * Para nuestro caso, esta interfaz tendrá una implementación con Apache Kafka.
  * <p>
- * Para mantener la arquitectura hexágonal (puertos y adaptadores), creamos esta interfaz que implementaremos en
+ * Para mantener la arquitectura hexagonal (puertos y adaptadores), creamos esta interfaz que implementaremos en
  * infraestructura.
  */
 public interface MessageBroker {
