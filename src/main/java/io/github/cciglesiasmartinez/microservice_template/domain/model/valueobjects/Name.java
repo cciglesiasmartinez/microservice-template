@@ -29,4 +29,12 @@ public class Name {
         return new Name(name);
     }
 
+    public String value() {
+        return this.value;
+    }
+
+    public String getValue() {
+        return this.value;
+    }
+
 }
