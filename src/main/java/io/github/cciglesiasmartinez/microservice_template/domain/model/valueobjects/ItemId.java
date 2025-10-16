@@ -36,7 +36,7 @@ public class ItemId {
 
     /**
      * Constructor privado.
-     * @param value
+     * @param value el valor deseado para el value object.
      */
     @JsonCreator
     private ItemId(@JsonProperty("value") String value) {
@@ -45,7 +45,7 @@ public class ItemId {
 
     /**
      * Método factoría. Este método será empleado para generar por primera vez un identificador.
-     * @return
+     * @return un objeto de tipo {@link ItemId}.
      */
     public static ItemId generate() {
         return new ItemId(UUID.randomUUID().toString());
@@ -57,8 +57,8 @@ public class ItemId {
      * objeto en el sistema.
      * <p>
      * Entender la diferencia entre cuando usemos ItemId.generate() e ItemId.of() es importante.
-     * @param id
-     * @return
+     * @param id id deseado a partir del cual se generará el objeto.
+     * @return un objeto de tipo {@link ItemId}.
      */
     public static ItemId of(String id) {
         if (id == null || id.trim().isEmpty()) {
@@ -75,7 +75,7 @@ public class ItemId {
 
     /**
      * Getter convencional para value objects (nótese que no empieza por "get").
-     * @return
+     * @return el valor.
      */
     public String value() {
         return value;
@@ -83,7 +83,7 @@ public class ItemId {
 
     /**
      * Este getter es necesario porque es empleado por defecto por librerías de serialización.
-     * @return
+     * @return el valor.
      */
     public String getValue() {
         return value;
