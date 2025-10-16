@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class GetItemResponse {
+public class CreateItemResponse {
 
     private String id;
 
