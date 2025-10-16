@@ -1,6 +1,7 @@
 package io.github.cciglesiasmartinez.microservice_template.application.port.in;
 
-import io.github.cciglesiasmartinez.microservice_template.infrastructure.adapter.in.web.dto.requests.GetItemRequest;
+import io.github.cciglesiasmartinez.microservice_template.infrastructure.adapter.in.web.dto.requests.CreateItemRequest;
+import io.github.cciglesiasmartinez.microservice_template.infrastructure.adapter.in.web.dto.responses.CreateItemResponse;
 import io.github.cciglesiasmartinez.microservice_template.infrastructure.adapter.in.web.dto.responses.Envelope;
 import io.github.cciglesiasmartinez.microservice_template.infrastructure.adapter.in.web.dto.responses.GetItemResponse;
 
@@ -13,6 +14,7 @@ import io.github.cciglesiasmartinez.microservice_template.infrastructure.adapter
  */
 public interface ItemUseCase {
 
-    Envelope<GetItemResponse> getItem(GetItemRequest request);
+    Envelope<GetItemResponse> getItem(String id);
+    Envelope<CreateItemResponse> createItem(CreateItemRequest request);
 
 }
