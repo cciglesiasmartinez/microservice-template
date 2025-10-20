@@ -11,10 +11,29 @@ import org.slf4j.MDC;
 import java.time.LocalDateTime;
 
 /**
- * Esto es parte de un DTO de respuesta estándar. Un DTO de salida {@link Envelope} siempre tendrá un apartado "data"
- * que coincidirá con un DTO de respuesta y luego un apartado "meta" que contendrá esta clase.
+ * Representa la sección de metadatos estándar incluida en todas las respuestas de la API.
  * <p>
- * Mayormente esta clase contendrá
+ * Forma parte del DTO de salida {@link Envelope}, el cual siempre incluirá dos secciones:
+ * <ul>
+ *     <li><b>data</b>: el cuerpo de la respuesta con la información solicitada.</li>
+ *     <li><b>meta</b>: un objeto de tipo {@code Meta} con información contextual del request.</li>
+ * </ul>
+ * </p>
+ *
+ * <p>
+ * La clase {@code Meta} proporciona datos de trazabilidad y diagnóstico útiles para el desarrollo y la observabilidad,
+ * tales como:
+ * </p>
+ * <ul>
+ *     <li>El identificador único de la petición ({@code requestId}) que permite correlacionar logs entre
+ *     microservicios.</li>
+ *     <li>La marca temporal ({@code timestamp}) en que se generó la respuesta.</li>
+ * </ul>
+ *
+ * <p>
+ * Este patrón de envoltorio ({@code Envelope + Meta}) promueve respuestas uniformes, facilita el seguimiento de
+ * peticiones distribuidas y mejora la experiencia de depuración en entornos de arquitectura orientada a eventos (EOA).
+ * </p>
  */
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @JsonInclude(JsonInclude.Include.NON_NULL)
