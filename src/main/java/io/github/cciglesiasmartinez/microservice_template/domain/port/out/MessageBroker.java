@@ -1,5 +1,7 @@
 package io.github.cciglesiasmartinez.microservice_template.domain.port.out;
 
+import io.github.cciglesiasmartinez.microservice_template.domain.event.DomainEvent;
+
 /**
  * Esta será la interfaz que emplearemos para comunicarnos con nuestro bróker de mensajes entre microservicios.
  * <p>
@@ -10,6 +12,6 @@ package io.github.cciglesiasmartinez.microservice_template.domain.port.out;
  */
 public interface MessageBroker {
 
-    void sendMessage(String message);
+    void sendMessage(DomainEvent event);
 
 }
