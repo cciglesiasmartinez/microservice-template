@@ -19,12 +19,13 @@ import java.time.LocalDateTime;
  * Además, podría ser interesante también propagar otros eventos, como cuando un Item se actualice o se elimine.
  */
 @Getter
-public class ItemCreatedEvent implements DomainEvent {
+public class ItemCreatedEvent extends DomainEvent {
 
     private final ItemId itemId;
     private final LocalDateTime occurredOn;
 
     public ItemCreatedEvent(ItemId itemId) {
+        super("ItemCreatedEvent");
         this.itemId = itemId;
         this.occurredOn = LocalDateTime.now();
     }
