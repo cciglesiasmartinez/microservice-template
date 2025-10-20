@@ -26,8 +26,8 @@ public class ItemRepositoryImpl implements ItemRepository {
 
     @Override
     public Optional<Item> findById(ItemId id) {
-        Item item = mapper.toDomain(springDataItemRepository.findById(id.value()).orElse(null));
-        return Optional.of(item);
+        return springDataItemRepository.findById(id.value())
+                .map(mapper::toDomain);
     }
 
     @Override
