@@ -72,7 +72,6 @@ public class ItemId {
         return new ItemId(id.trim());
     }
 
-
     /**
      * Getter convencional para value objects (nótese que no empieza por "get").
      * @return el valor.
