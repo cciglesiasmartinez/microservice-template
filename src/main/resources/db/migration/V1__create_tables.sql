@@ -1,4 +1,4 @@
 CREATE TABLE items (
     id CHAR(36) PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL
+    name VARCHAR(255) NOT NULL
 );
